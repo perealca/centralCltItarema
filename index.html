@@ -8,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #EAF4F2;
-    --paper: #FFFDF8;
-    --coral: #FF6B5B;
-    --marigold: #FFC145;
-    --teal: #0F6E6E;
-    --ink: #1B2A4A;
-    --tape: #CFE8E6;
-    --line: rgba(27,42,74,0.14);
+    --bg: #F0F4F8;
+    --paper: #FFFFFF;
+    --coral: #005691;       /* Azul primário/destaque */
+    --marigold: #E3F2FD;    /* Tom de azul bem claro para cartões e destaques */
+    --teal: #0A3C6B;        /* Azul escuro institucional */
+    --ink: #082032;         /* Texto e bordas em tom azul-noturno */
+    --tape: #D0E1F9;        /* Fita/etiquetas em azul suave */
+    --line: rgba(8, 32, 50, 0.14);
     --radius: 14px;
   }
   *{box-sizing:border-box;}
@@ -23,7 +23,7 @@
   body{
     margin:0;
     background:
-      radial-gradient(circle at 1px 1px, rgba(27,42,74,0.06) 1px, transparent 0) 0 0/22px 22px,
+      radial-gradient(circle at 1px 1px, rgba(8,32,50,0.06) 1px, transparent 0) 0 0/22px 22px,
       var(--bg);
     color:var(--ink);
     font-family:'Inter',sans-serif;
@@ -32,7 +32,7 @@
   .doodle-arrow{ position:absolute; }
   header.top{
     position:sticky; top:0; z-index:50;
-    background:rgba(234,244,242,0.88);
+    background:rgba(240,244,248,0.88);
     backdrop-filter:blur(6px);
     border-bottom:2px solid var(--ink);
   }
@@ -46,7 +46,7 @@
   }
   .brand .pin{
     width:12px; height:12px; border-radius:50%;
-    background:var(--coral); box-shadow:0 0 0 3px rgba(255,107,91,0.25);
+    background:var(--coral); box-shadow:0 0 0 3px rgba(0,86,145,0.25);
   }
   nav.tabs{
     display:flex; gap:6px; flex-wrap:wrap;
@@ -91,7 +91,7 @@
     margin:0 0 18px;
   }
   h1 span{ color:var(--coral); }
-  .hero p.lede{ font-size:1.12rem; line-height:1.6; max-width:46ch; color:#334; margin-bottom:26px;}
+  .hero p.lede{ font-size:1.12rem; line-height:1.6; max-width:46ch; color:#1C3144; margin-bottom:26px;}
   .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
   .btn-primary, .btn-ghost{
     font-family:'Fredoka',sans-serif; font-weight:600; font-size:1rem;
@@ -105,11 +105,11 @@
   .btn-ghost:hover{ background:var(--paper); }
 
   .board{
-    position:relative; background:#D9C7A3; border:2px solid var(--ink);
+    position:relative; background:#82ACD9; border:2px solid var(--ink);
     border-radius:16px; padding:26px; min-height:320px;
-    box-shadow:6px 6px 0 rgba(27,42,74,0.18);
+    box-shadow:6px 6px 0 rgba(8,32,50,0.18);
     background-image:
-      radial-gradient(rgba(0,0,0,0.10) 1px, transparent 1.2px);
+      radial-gradient(rgba(255,255,255,0.25) 1px, transparent 1.2px);
     background-size:9px 9px;
   }
   .note{
@@ -119,9 +119,9 @@
     box-shadow:3px 3px 0 rgba(0,0,0,0.15);
   }
   .note .tag-title{ font-family:'Fredoka',sans-serif; font-size:0.92rem; font-weight:600; margin-bottom:4px; display:block;}
-  .note:nth-child(1){ top:10px; left:14px; transform:rotate(-6deg); background:#FFF3D6;}
+  .note:nth-child(1){ top:10px; left:14px; transform:rotate(-6deg); background:#E3F2FD;}
   .note:nth-child(2){ top:26px; right:8px; transform:rotate(4deg); }
-  .note:nth-child(3){ bottom:18px; left:36px; transform:rotate(3deg); background:#E4F3EF;}
+  .note:nth-child(3){ bottom:18px; left:36px; transform:rotate(3deg); background:#D0E1F9;}
   .note:nth-child(4){ bottom:6px; right:20px; transform:rotate(-4deg); }
   .pinhead{
     width:10px; height:10px; border-radius:50%; background:var(--coral);
@@ -132,7 +132,7 @@
   .section-head{ margin-bottom:34px; }
   .section-head .eyebrow{ transform:rotate(-1deg); }
   .section-head h2{ font-family:'Fredoka',sans-serif; font-size:2.1rem; margin:6px 0 8px;}
-  .section-head p{ color:#334; max-width:60ch; line-height:1.6;}
+  .section-head p{ color:#1C3144; max-width:60ch; line-height:1.6;}
 
   .apply-link{ font-family:'Fredoka',sans-serif; font-weight:600; color:var(--coral); text-decoration:none; }
   .apply-link:hover{ text-decoration:underline; }
@@ -142,7 +142,7 @@
   }
   .cv-card{
     background:var(--marigold); border:2px solid var(--ink); border-radius:16px;
-    padding:32px; box-shadow:6px 6px 0 rgba(27,42,74,0.18);
+    padding:32px; box-shadow:6px 6px 0 rgba(8,32,50,0.18);
   }
   .cv-card h3{ font-family:'Fredoka',sans-serif; font-size:1.5rem; margin-top:0; }
   .cv-card ul{ padding-left:20px; line-height:1.7; }
@@ -154,7 +154,7 @@
   .contact-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
   .contact-card{
     background:var(--paper); border:2px solid var(--ink); border-radius:14px; padding:26px;
-    box-shadow:4px 4px 0 rgba(27,42,74,0.12);
+    box-shadow:4px 4px 0 rgba(8,32,50,0.12);
   }
   .insta-row{ display:flex; align-items:center; gap:12px; margin-top:12px; }
   .insta-row a{ font-family:'Fredoka',sans-serif; font-weight:600; color:var(--ink); text-decoration:none; font-size:1.05rem;}
@@ -163,7 +163,7 @@
 
   footer{
     border-top:2px solid var(--ink); text-align:center; padding:20px;
-    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:#556;
+    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:#3A506B;
   }
 
   @media (max-width:760px){
@@ -252,19 +252,19 @@
     <div class="contact-wrap">
       <div class="contact-card">
         <h3 style="font-family:'Fredoka',sans-serif; margin-top:0;">Instagram</h3>
-        <p style="color:#445;">É lá que a gente posta as vagas mais recentes primeiro.</p>
+        <p style="color:#1C3144;">É lá que a gente posta as vagas mais recentes primeiro.</p>
         <div class="insta-row">
           <svg class="ig-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="20" height="20" rx="6" stroke="#1B2A4A" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4.5" stroke="#1B2A4A" stroke-width="2"/>
-            <circle cx="17.4" cy="6.6" r="1.3" fill="#1B2A4A"/>
+            <rect x="2" y="2" width="20" height="20" rx="6" stroke="#082032" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4.5" stroke="#082032" stroke-width="2"/>
+            <circle cx="17.4" cy="6.6" r="1.3" fill="#082032"/>
           </svg>
           <a href="https://instagram.com/centralclt_itarema" target="_blank" rel="noopener">@centralclt_itarema</a>
         </div>
       </div>
       <div class="contact-card">
         <h3 style="font-family:'Fredoka',sans-serif; margin-top:0;">E-mail</h3>
-        <p style="color:#445;">Prefere mandar um e-mail? Também pode.</p>
+        <p style="color:#1C3144;">Prefere mandar um e-mail? Também pode.</p>
         <a class="apply-link" href="mailto:centralcltitarema@gmail.com">centralcltitarema@gmail.com</a>
       </div>
     </div>
