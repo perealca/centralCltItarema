@@ -156,9 +156,14 @@
   }
   .cv-card h3{ font-family:'Lilita One', cursive; font-size:1.7rem; margin-top:0; text-transform:uppercase;}
   .cv-card ul{ padding-left:20px; line-height:1.7; }
+  
   .redirect-note{
-    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:#2E7D32;
-    background:#E8F5E9; padding:10px 14px; border-radius:8px; margin-top:18px; display:inline-block; font-weight:bold;
+    font-family:'IBM Plex Mono',monospace; font-size:0.82rem; color:var(--ink);
+    background:#FFFFFF; border:2px solid var(--ink); padding:10px 14px; border-radius:8px; margin-top:18px;
+    display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap; line-height:1.4;
+  }
+  .redirect-note img{
+    height:22px; width:auto; display:inline-block; vertical-align:middle;
   }
 
   .contact-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
@@ -193,7 +198,7 @@
 <header class="top">
   <div class="top-inner">
     <div class="brand">
-      <img src="Central_CLT_Itarema_Logo_Site-removebg-preview.png" alt="Central CLT">
+      <img src="centralclt.png" alt="Central CLT">
     </div>
     <nav class="tabs" role="tablist" aria-label="Navegação principal">
       <button class="active" data-tab="inicio" role="tab" aria-selected="true">Início</button>
@@ -246,7 +251,11 @@
         <a class="btn-green" href="https://www.meucurriculoperfeito.com.br" target="_blank" rel="noopener" style="display:inline-block; text-decoration:none;">
           Ir para o gerador de currículo ↗
         </a>
-        <div><span class="redirect-note">Abre em uma nova aba — link de exemplo, troque pelo gerador que preferir</span></div>
+        <div>
+          <span class="redirect-note">
+            Use o <img src="meucurriculoperfeito.png" alt="Meu Currículo Perfeito"> para fazer currículos de maneira prática e eficiente.
+          </span>
+        </div>
       </div>
       <div class="board" aria-hidden="true" style="min-height:220px;">
         <div class="note" style="top:20px; left:24px;"><span class="pinhead"></span><span class="tag-title">Dica</span>capriche no resumo profissional</div>
