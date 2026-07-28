@@ -8,15 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #F4F6F8;
+    --bg: #F0F4F8;
     --paper: #FFFFFF;
-    --accent: #E65100;
+    --accent: #005691;
     --green: #2E7D32;
     --green-hover: #1B5E20; 
-    --marigold: #FFF3E0;
+    --marigold: #E3F2FD;
     --teal: #005691;
     --ink: #1B2A4A;
-    --tape: #FFE0B2;
+    --tape: #D0E1F9;
     --board-bg: #8D6E63;
     --radius: 14px;
   }
@@ -39,17 +39,17 @@
     border-bottom:2px solid var(--ink);
   }
   .top-inner{
-    max-width:1080px; margin:0 auto; padding:14px 24px;
+    max-width:1080px; margin:0 auto; padding:10px 24px;
     display:flex; align-items:center; justify-content:space-between; gap:16px;
   }
   .brand{
-    font-family:'Lilita One', cursive; font-size:1.6rem; letter-spacing:0.5px;
-    display:flex; align-items:center; gap:8px; color:#FFFFFF;
-    text-transform:uppercase;
+    display:flex; align-items:center;
   }
-  .brand .pin{
-    width:12px; height:12px; border-radius:50%;
-    background:#FFFFFF; box-shadow:0 0 0 3px rgba(255,255,255,0.3);
+  .brand img{
+    height:42px;
+    width:auto;
+    display:block;
+    object-fit:contain;
   }
   nav.tabs{
     display:flex; gap:6px; flex-wrap:wrap;
@@ -63,7 +63,7 @@
   }
   nav.tabs button:hover{ transform:translateY(-2px); }
   nav.tabs button:focus-visible{ outline:3px solid #FFFFFF; outline-offset:2px; }
-  nav.tabs button.active{ background:#FFECB3; }
+  nav.tabs button.active{ background:#E3F2FD; }
   
   nav.tabs a.tab-link{
     font-family:'Lilita One', cursive; font-weight:400; font-size:1rem; letter-spacing:0.3px;
@@ -87,7 +87,7 @@
   }
   .eyebrow{
     font-family:'IBM Plex Mono',monospace; font-size:0.78rem; letter-spacing:.06em;
-    background:var(--tape); color:#D84315; padding:5px 10px; border-radius:4px;
+    background:var(--tape); color:var(--teal); padding:5px 10px; border-radius:4px;
     display:inline-block; transform:rotate(-2deg); margin-bottom:14px; font-weight:bold;
   }
   h1{
@@ -130,7 +130,7 @@
   .note .tag-title{ font-family:'Lilita One', cursive; font-size:1rem; font-weight:normal; margin-bottom:4px; display:block; letter-spacing:0.3px;}
   .note:nth-child(1){ top:10px; left:14px; transform:rotate(-6deg); background:#FFF9C4;}
   .note:nth-child(2){ top:26px; right:8px; transform:rotate(4deg); background:#E8F5E9;}
-  .note:nth-child(3){ bottom:18px; left:36px; transform:rotate(3deg); background:#FFE0B2;}
+  .note:nth-child(3){ bottom:18px; left:36px; transform:rotate(3deg); background:#E3F2FD;}
   .note:nth-child(4){ bottom:6px; right:20px; transform:rotate(-4deg); background:#F5F5F5;}
   
   .pinhead{
@@ -192,7 +192,9 @@
 
 <header class="top">
   <div class="top-inner">
-    <div class="brand"><span class="pin"></span>Central CLT Itarema</div>
+    <div class="brand">
+      <img src="Central_CLT_Itarema_Logo_Site-removebg-preview.png" alt="Central CLT">
+    </div>
     <nav class="tabs" role="tablist" aria-label="Navegação principal">
       <button class="active" data-tab="inicio" role="tab" aria-selected="true">Início</button>
       <button data-tab="curriculo" role="tab" aria-selected="false">Currículo</button>
