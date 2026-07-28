@@ -177,8 +177,22 @@
   .ig-icon{ width:34px; height:34px; flex:none; }
 
   footer{
-    border-top:2px solid var(--ink); text-align:center; padding:20px;
-    font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:#455A64;
+    border-top:2px solid var(--ink);
+    text-align:center;
+    padding:24px 20px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    color:#455A64;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  footer a.footer-link{
+    color:#455A64;
+    text-decoration:underline;
+  }
+  footer a.footer-link:hover{
+    color:var(--accent);
   }
 
   @media (max-width:760px){
@@ -295,9 +309,15 @@
 
 <footer>
   <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;">
-    <span>Central CLT Itarema</span>
+    <span>© 2026 Central CLT Itarema — Todos os direitos reservados.</span>
     <span>·</span>
-    <span>Site desenvolvido por Renan Carneiro</span>
+    <a href="#" class="footer-link">Termos de Uso</a>
+    <span>·</span>
+    <a href="#" class="footer-link">Política de Privacidade</a>
+  </div>
+  
+  <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;">
+    <span>Desenvolvido por Renan Carneiro</span>
     <a href="https://instagram.com/perealca" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:5px; color:inherit; text-decoration:none; font-weight:bold;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:16px; height:16px; vertical-align:middle;">
       @perealca
