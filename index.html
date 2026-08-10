@@ -125,7 +125,6 @@
   }
   .stamp span{ display:block; }
   .stamp .big{ font-size:1.05rem; }
-  @media (max-width:640px){ .stamp{ display:none; } }
 
   .btn-primary, .btn-ghost, .btn-green{
     font-family:'Lilita One', cursive; font-size:1.08rem; letter-spacing:0.3px;
@@ -162,6 +161,13 @@
   }
   .chip:hover{ transform:translateY(-2px); background:var(--accent); color:#fff; }
 
+  .tips-head{ margin-top:64px; text-align:center; }
+  .tips-head .eyebrow{ margin-bottom:10px; }
+  .tips-head h2{
+    font-family:'Lilita One', cursive; font-size:clamp(1.4rem, 4.5vw, 1.9rem);
+    margin:0 0 24px; text-transform:uppercase; letter-spacing:0.4px;
+  }
+
   .board{
     position:relative; background:var(--board-bg); border:var(--border);
     border-radius:var(--radius-lg); padding:26px; min-height:320px;
@@ -169,6 +175,8 @@
     background-image: radial-gradient(rgba(0,0,0,0.18) 1px, transparent 1.2px);
     background-size:9px 9px;
   }
+
+  .home-board{ max-width:1032px; width:100%; margin:0 auto; min-height:360px; }
 
   .note{
     position:absolute; width:150px;
@@ -294,6 +302,16 @@
     .cta-row .btn-primary, .cta-row .btn-ghost, .cta-row .btn-green{ width:100%; text-align:center; }
     .areas{ margin-top:36px; }
 
+    .stamp{
+      position:static; margin:0 auto 16px; top:auto; right:auto;
+      width:76px; height:76px; transform:rotate(-6deg);
+      font-size:0.64rem;
+    }
+    .stamp .big{ font-size:0.9rem; }
+
+    .tips-head{ margin-top:44px; }
+    .tips-head h2{ margin-bottom:18px; }
+
     .steps{ grid-template-columns:1fr; gap:16px; margin-bottom:36px; }
 
     .board{ min-height:0; padding:18px; }
@@ -374,6 +392,17 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="tips-head">
+      <span class="eyebrow">Antes de se candidatar</span>
+      <h2>Dicas rápidas pra garantir a vaga</h2>
+    </div>
+    <div class="board home-board" aria-hidden="true">
+      <div class="note note-a" style="top:28px; left:1.5%; transform: rotate(-4deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>siga o perfil e ative as notificações</div>
+      <div class="note note-b" style="top:16px; right:1.5%; transform: rotate(3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>responda rápido, vaga boa não espera</div>
+      <div class="note note-a" style="bottom:26px; left:1.5%; transform: rotate(2deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>leve currículo impresso na entrevista</div>
+      <div class="note note-b" style="bottom:16px; right:1.5%; transform: rotate(-3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>chegue no horário combinado</div>
     </div>
   </section>
 
