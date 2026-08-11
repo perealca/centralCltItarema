@@ -98,7 +98,11 @@
     position:relative; display:flex; flex-direction:column;
     align-items:center; text-align:center; padding-top:28px;
   }
-  .hero-content{ max-width:640px; display:flex; flex-direction:column; align-items:center; position:relative; }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 1fr; gap:40px;
+    align-items:center; width:100%; max-width:1032px; margin:0 auto;
+  }
+  .hero-content{ max-width:640px; display:flex; flex-direction:column; align-items:center; position:relative; margin:0 auto; }
   .eyebrow{
     font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:.08em;
     background:var(--tape); color:var(--accent-dark); padding:6px 12px; border-radius:4px;
@@ -161,13 +165,6 @@
   }
   .chip:hover{ transform:translateY(-2px); background:var(--accent); color:#fff; }
 
-  .tips-head{ margin-top:64px; text-align:center; }
-  .tips-head .eyebrow{ margin-bottom:10px; }
-  .tips-head h2{
-    font-family:'Lilita One', cursive; font-size:clamp(1.4rem, 4.5vw, 1.9rem);
-    margin:0 0 24px; text-transform:uppercase; letter-spacing:0.4px;
-  }
-
   .board{
     position:relative; background:var(--board-bg); border:var(--border);
     border-radius:var(--radius-lg); padding:26px; min-height:320px;
@@ -176,7 +173,7 @@
     background-size:9px 9px;
   }
 
-  .home-board{ max-width:1032px; width:100%; margin:0 auto; min-height:360px; }
+  .home-board{ width:100%; min-height:300px; }
 
   .note{
     position:absolute; width:150px;
@@ -309,8 +306,8 @@
     }
     .stamp .big{ font-size:0.9rem; }
 
-    .tips-head{ margin-top:44px; }
-    .tips-head h2{ margin-bottom:18px; }
+    .hero-grid{ grid-template-columns:1fr; gap:28px; }
+    .home-board{ min-height:260px; }
 
     .steps{ grid-template-columns:1fr; gap:16px; margin-bottom:36px; }
 
@@ -370,39 +367,37 @@
 
   <section id="inicio" class="active">
     <div class="hero">
-      <div class="hero-content">
-        <div class="stamp" aria-hidden="true"><span><span class="big">100%</span>gratuito</span></div>
-        <span class="eyebrow">Vagas novas a todo momento</span>
-        <h1>A vaga certa começa <span>aqui no Central</span>.</h1>
-        <p class="lede">Reunimos oportunidades de emprego em Itarema em um só lugar e te damos uma mãozinha
-        pra chegar com o currículo pronto na entrevista.</p>
-        <div class="cta-row">
-          <a class="btn-primary" href="https://instagram.com/centralclt_itarema" target="_blank" rel="noopener">Ver vagas abertas ↗</a>
-          <button class="btn-ghost" onclick="showTab('curriculo')">Montar meu currículo</button>
-        </div>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="stamp" aria-hidden="true"><span><span class="big">100%</span>gratuito</span></div>
+          <span class="eyebrow">Vagas novas a todo momento</span>
+          <h1>A vaga certa começa <span>aqui no Central</span>.</h1>
+          <p class="lede">Reunimos oportunidades de emprego em Itarema em um só lugar e te damos uma mãozinha
+          pra chegar com o currículo pronto na entrevista.</p>
+          <div class="cta-row">
+            <a class="btn-primary" href="https://instagram.com/centralclt_itarema" target="_blank" rel="noopener">Ver vagas abertas ↗</a>
+            <button class="btn-ghost" onclick="showTab('curriculo')">Montar meu currículo</button>
+          </div>
 
-        <div class="areas">
-          <span class="areas-label">Áreas em alta na região</span>
-          <div class="chip-row">
-            <span class="chip">Turismo &amp; Hotelaria</span>
-            <span class="chip">Comércio &amp; Vendas</span>
-            <span class="chip">Gastronomia</span>
-            <span class="chip">Construção Civil</span>
-            <span class="chip">Serviços Gerais</span>
+          <div class="areas">
+            <span class="areas-label">Áreas em alta na região</span>
+            <div class="chip-row">
+              <span class="chip">Turismo &amp; Hotelaria</span>
+              <span class="chip">Comércio &amp; Vendas</span>
+              <span class="chip">Gastronomia</span>
+              <span class="chip">Construção Civil</span>
+              <span class="chip">Serviços Gerais</span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="tips-head">
-      <span class="eyebrow">Antes de se candidatar</span>
-      <h2>Dicas rápidas pra garantir a vaga</h2>
-    </div>
-    <div class="board home-board" aria-hidden="true">
-      <div class="note note-a" style="top:28px; left:1.5%; transform: rotate(-4deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>siga o perfil e ative as notificações</div>
-      <div class="note note-b" style="top:16px; right:1.5%; transform: rotate(3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>responda rápido, vaga boa não espera</div>
-      <div class="note note-a" style="bottom:26px; left:1.5%; transform: rotate(2deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>leve currículo impresso na entrevista</div>
-      <div class="note note-b" style="bottom:16px; right:1.5%; transform: rotate(-3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>chegue no horário combinado</div>
+        <div class="board home-board" aria-hidden="true">
+          <div class="note note-a" style="top:20px; left:6%; transform: rotate(-3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>siga o perfil e ative as notificações</div>
+          <div class="note note-b" style="top:14px; right:6%; transform: rotate(3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>responda rápido, vaga boa não espera</div>
+          <div class="note note-a" style="bottom:20px; left:12%; transform: rotate(2deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>leve currículo impresso na entrevista</div>
+          <div class="note note-b" style="bottom:14px; right:10%; transform: rotate(-3deg);"><span class="pinhead"></span><span class="tag-title">Dica</span>chegue no horário combinado</div>
+        </div>
+      </div>
     </div>
   </section>
 
